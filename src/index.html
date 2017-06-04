@@ -31,21 +31,22 @@
          <div class="quote-wrapper">
            <div class="quote-text text-center">
              <i class="fa fa-quote-left" aria-hidden="true"></i>
-             If we have a positive mental attitude, then even when surrounded by hostility, we shall not lack inner peace.
+             <span data-bind="text: quoteText"></span>
            </div>
            <div class="quote-author text-right">
-             - Dalai Lama
+             - <span data-bind="text: quoteAuthor"></span>
            </div>
            <div class="buttons">
              <span class="social">
-               <button type="button" name="twitter" id="twitter">
+               <button type="button" name="twitter" data-bind="click: twitterPost">
                  <i class="fa fa-twitter" aria-hidden="true"></i>
                </button>
-               <button type="button" name="facebook" id="facebook">
+               <button type="button" name="facebook" data-bind="click: facebookPost">
                  <i class="fa fa-facebook" aria-hidden="true"></i>
                </button>
              </span>
-             <button type="button" name="new" class="btn btn-default pull-right newQuote">New quote</button>
+             <button type="button" name="new" class="btn btn-default pull-right newQuote"
+               data-bind="click: newQuote">New quote</button>
            </div>
          </div>
 
@@ -57,6 +58,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- knockout -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
 
     <!-- build:js inline -->
     <script src="app.js"></script>
