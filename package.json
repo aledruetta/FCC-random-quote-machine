@@ -1,0 +1,8 @@
+{
+  "name": "FCC-random-quote-machine",
+  "version": "1.0.0",
+  "description": "freeCodeCamp project",
+  "main": "src/app.js",
+  "author": "Alejandro Druetta <aledruetta@gmail.com>",
+  "license": "MIT"
+}
