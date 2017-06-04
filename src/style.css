@@ -1,0 +1,48 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #363F45;
+}
+
+.all-wrapper {
+  display: table;
+  height: 100%;
+}
+
+.all-wrapper-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.quote-wrapper {
+  padding: 1em;
+  font-family: 'Jura', sans-serif;
+  color: #CCDB38;
+}
+
+.quote-text {
+  font-family: 'Slavo 27px', cursive;
+  font-size: 1.7em;
+}
+
+.quote-author {
+  margin: 1em 0;
+  font-size: 1.4em;
+}
+
+.social button {
+  border: 0;
+  background-color: inherit;
+  font-size: 1.6em;
+  padding: 0 0.5em;
+}
+
+.newQuote {
+  background-color: #CCDB38;
+  color: #363F45;
+  font-weight: 500;
+  border: 0;
+}
