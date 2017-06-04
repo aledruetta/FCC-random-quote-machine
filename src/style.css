@@ -33,16 +33,29 @@ body {
   font-size: 1.4em;
 }
 
-.social button {
+.social-button {
   border: 0;
   background-color: inherit;
+  color: #CCDB38;
   font-size: 1.6em;
   padding: 0 0.5em;
 }
 
-.newQuote {
+.social-button:hover,
+.social-button:active {
+  background-color: inherit;
+  color: #E81D62;
+}
+
+.new-quote,
+.new-quote:focus {
   background-color: #CCDB38;
   color: #363F45;
   font-weight: 500;
   border: 0;
+}
+
+.new-quote:hover,
+.new-quote:active {
+  background-color: #E81D62;
 }
