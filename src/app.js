@@ -12,14 +12,11 @@ $(function() {
     this.facebookPost = function() {};
 
     this.newQuote = function() {
-      var url = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&callback=?';
+      var entry = 'https://api.forismatic.com/api/1.0/?';
+      var query = 'method=getQuote&format=jsonp&lang=en&jsonp=?';
+      var url = entry + query;
 
-      // $.getJSON(url)
-      $.ajax({
-        url: 'https://api.forismatic.com/api/1.0/?',
-        dataType: 'jsonp',
-        data: 'method=getQuote&format=jsonp&lang=en&jsonp=?',
-      })
+      $.getJSON(url)
       .done(function(data) {
         self.quoteAuthor(data.quoteAuthor);
         self.quoteText(data.quoteText);
