@@ -40,9 +40,9 @@ $(function() {
     update: function(element, valueAccessor) {
       var value = ko.unwrap(valueAccessor());
       if (value === 'out') {
-        $(element).fadeOut();
+        $(element).fadeOut(400);
       } else if (value === 'in') {
-        $(element).fadeIn();
+        $(element).fadeIn(400);
       }
     }
   };
