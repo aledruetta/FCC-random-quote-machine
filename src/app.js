@@ -28,14 +28,14 @@ $(function() {
         self.transition('out');
         setTimeout(function() {
           if (data.quoteAuthor) {
-            self.quoteAuthor(data.quoteAuthor);
+            self.quoteAuthor(data.quoteAuthor.trim());
           } else {
             self.quoteAuthor('Anonymous');
           }
-          self.quoteText(data.quoteText);
+          self.quoteText(data.quoteText.trim());
 
           self.twitterHref();
-          
+
           self.transition('in');
         }, 400);
       })
