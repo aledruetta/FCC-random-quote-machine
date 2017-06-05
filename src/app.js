@@ -6,6 +6,7 @@ $(function() {
 
     this.quoteText = ko.observable('');
     this.quoteAuthor = ko.observable('');
+    this.transition = ko.observable(false);
 
     this.twitterPost = function() {};
 
@@ -18,14 +19,29 @@ $(function() {
 
       $.getJSON(url)
       .done(function(data) {
-        self.quoteAuthor(data.quoteAuthor);
-        self.quoteText(data.quoteText);
+        self.transition('out');
+        setTimeout(function() {
+          self.quoteAuthor(data.quoteAuthor);
+          self.quoteText(data.quoteText);
+          self.transition('in');
+        }, 400);
       })
       .fail();
     };
 
     this.newQuote();
   }
+
+  ko.bindingHandlers.fadeVisible = {
+    update: function(element, valueAccessor) {
+      var value = ko.unwrap(valueAccessor());
+      if (value === 'out') {
+        $(element).fadeOut();
+      } else if (value === 'in') {
+        $(element).fadeIn();
+      }
+    }
+  };
 
   ko.applyBindings(new AppViewModel());
 
