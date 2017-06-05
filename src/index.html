@@ -43,10 +43,10 @@
             </div>
             <div class="buttons">
               <span class="social">
-                <button type="button" title="Share on Twitter" class="btn btn-default social-button"
-                  data-bind="click: twitterPost">
+                <a title="Share on Twitter" class="btn btn-default social-button"
+                  target="_blank" data-bind="attr: {href: url.twitter}">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
-                </button>
+                </a>
                 <button type="button" title="Share on Facebook" class="btn btn-default social-button"
                   data-bind="click: facebookPost">
                   <i class="fa fa-facebook" aria-hidden="true"></i>

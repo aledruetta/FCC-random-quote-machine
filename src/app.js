@@ -7,10 +7,16 @@ $(function() {
     this.quoteText = ko.observable('');
     this.quoteAuthor = ko.observable('');
     this.transition = ko.observable(false);
+    this.url = {
+      twitter: ko.observable(''),
+    };
 
-    this.twitterPost = function() {};
+    this.twitterHref = function() {
+      this.url.twitter('https://twitter.com/intent/tweet?text="' + self.quoteText() + '" - ' +
+        self.quoteAuthor());
+    };
 
-    this.facebookPost = function() {};
+    this.facebookHref = function() {};
 
     this.newQuote = function() {
       var entry = 'https://api.forismatic.com/api/1.0/?';
@@ -27,6 +33,9 @@ $(function() {
             self.quoteAuthor('Anonymous');
           }
           self.quoteText(data.quoteText);
+
+          self.twitterHref();
+          
           self.transition('in');
         }, 400);
       })
