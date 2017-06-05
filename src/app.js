@@ -21,7 +21,11 @@ $(function() {
       .done(function(data) {
         self.transition('out');
         setTimeout(function() {
-          self.quoteAuthor(data.quoteAuthor);
+          if (data.quoteAuthor) {
+            self.quoteAuthor(data.quoteAuthor);
+          } else {
+            self.quoteAuthor('Anonymous');
+          }
           self.quoteText(data.quoteText);
           self.transition('in');
         }, 400);

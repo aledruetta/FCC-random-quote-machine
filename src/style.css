@@ -5,22 +5,25 @@ body {
 
 body {
   background-color: #363F45;
+  color: #CCDB38;
+  font-family: 'Jura', sans-serif;
 }
 
 .all-wrapper {
-  display: table;
   height: 100%;
 }
 
 .all-wrapper-row {
-  display: table-cell;
+  height: calc(100% - 30px);
   vertical-align: middle;
+}
+
+.all-wrapper-col {
+  height: 100%;
 }
 
 .quote-wrapper {
   padding: 1em;
-  font-family: 'Jura', sans-serif;
-  color: #CCDB38;
 }
 
 .quote-text {
@@ -59,4 +62,8 @@ body {
 .new-quote:hover,
 .new-quote:active {
   background-color: #E81D62;
+}
+
+footer {
+  height: 30px;
 }
