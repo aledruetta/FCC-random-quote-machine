@@ -9,6 +9,18 @@ body {
   font-family: 'Jura', sans-serif;
 }
 
+a,
+a:focus,
+a:visited {
+  color: #CCDB38;
+}
+
+a:hover,
+a:active {
+  background-color: inherit;
+  color: #E81D62;
+}
+
 .all-wrapper {
   height: 100%;
 }
