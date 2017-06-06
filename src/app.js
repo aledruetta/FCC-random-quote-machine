@@ -16,7 +16,13 @@ $(function() {
         self.quoteAuthor());
     };
 
-    this.facebookHref = function() {};
+    this.facebookHref = function() {
+      FB.ui({
+        method: 'feed',
+        link: 'https://aledruetta.github.io/FCC-random-quote-machine/dist/index.html',
+        caption: 'An example caption',
+      }, function(response){});
+    };
 
     this.newQuote = function() {
       var entry = 'https://api.forismatic.com/api/1.0/?';
