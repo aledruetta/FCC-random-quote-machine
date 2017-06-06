@@ -22,10 +22,10 @@ $(function() {
         link: 'https://aledruetta.github.io/FCC-random-quote-machine/dist/index.html',
         caption: 'An example caption',
       }, function(response){
-        var quote = '"%text%" - %author%'
-          .replace(/%text%/, self.quoteText())
-          .replace(/%author%/).self.quoteAuthor();
-        document.getElementById('u_0_o').innerText = quote;
+        // var quote = '"%text%" - %author%'
+        //   .replace(/%text%/, self.quoteText())
+        //   .replace(/%author%/).self.quoteAuthor();
+        // document.getElementById('u_0_o').innerText = quote;
       });
     };
 
